@@ -1,0 +1,374 @@
+/* AdminLayout.css */
+
+/* Layout principal */
+.admin-layout {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    display: flex;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    background-color: #312e81;
+    color: white;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-open {
+    width: 16rem;
+    /* 256px */
+}
+
+.sidebar-closed {
+    width: 4rem;
+    /* 64px */
+}
+
+/* Header del sidebar */
+.sidebar-header {
+    padding: 1rem;
+    border-bottom: 1px solid #4338ca;
+}
+
+.sidebar-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-title {
+    transition: opacity 0.3s ease;
+}
+
+.title-visible {
+    opacity: 1;
+}
+
+.title-hidden {
+    opacity: 0;
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.brand-subtitle {
+    color: #a5b4fc;
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0 0;
+}
+
+.sidebar-toggle {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+    background-color: #4338ca;
+}
+
+/* Navegación */
+.sidebar-nav {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-item-active {
+    background-color: #4338ca;
+    color: white;
+}
+
+.nav-item-inactive {
+    color: #c7d2fe;
+}
+
+.nav-item-inactive:hover {
+    background-color: #4338ca;
+    color: white;
+}
+
+.nav-icon {
+    flex-shrink: 0;
+}
+
+.nav-label {
+    margin-left: 0.75rem;
+    transition: opacity 0.3s ease;
+}
+
+.label-visible {
+    opacity: 1;
+}
+
+.label-hidden {
+    opacity: 0;
+}
+
+/* Footer del sidebar */
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid #4338ca;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info-centered {
+    justify-content: center;
+}
+
+.user-avatar {
+    width: 2rem;
+    height: 2rem;
+    background-color: #4f46e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.user-details {
+    margin-left: 0.75rem;
+    transition: opacity 0.3s ease;
+}
+
+.details-visible {
+    opacity: 1;
+}
+
+.details-hidden {
+    opacity: 0;
+}
+
+.user-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.user-email {
+    font-size: 0.75rem;
+    color: #a5b4fc;
+    margin: 0;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header principal */
+.main-header {
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 1.5rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-info {
+    flex: 1;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111827;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.page-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0 0;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Botón de acción */
+.action-button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: #4338ca;
+}
+
+.action-button-text {
+    display: none;
+}
+
+/* Notificaciones */
+.notifications {
+    position: relative;
+}
+
+.notification-button {
+    padding: 0.5rem;
+    color: #9ca3af;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.notification-button:hover {
+    color: #4b5563;
+}
+
+.notification-icon {
+    position: relative;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenido de página */
+.page-content {
+    flex: 1;
+    overflow: auto;
+    padding: 1.5rem;
+}
+
+.content-container {
+    max-width: 80rem;
+    /* 1280px */
+    margin: 0 auto;
+}
+
+/* Tarjeta de bienvenida */
+.welcome-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+.welcome-icon {
+    margin: 0 auto 1rem auto;
+    color: #9ca3af;
+    font-size: 3rem;
+}
+
+.welcome-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+}
+
+.welcome-description {
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Overlay móvil */
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    display: none;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+    .action-button-text {
+        display: inline;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mobile-overlay {
+        display: block;
+    }
+
+    .sidebar-open {
+        position: fixed;
+        z-index: 50;
+        height: 100vh;
+    }
+}
+
+/* Estados de hover y focus */
+.sidebar-toggle:focus,
+.nav-item:focus,
+.action-button:focus,
+.notification-button:focus {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+/* Animaciones adicionales */
+@media (prefers-reduced-motion: no-preference) {
+    .admin-sidebar {
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-item {
+        transition: all 0.15s ease-in-out;
+    }
+
+    .action-button {
+        transition: all 0.15s ease-in-out;
+    }
+}
